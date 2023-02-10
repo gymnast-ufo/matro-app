@@ -1,45 +1,30 @@
+@import '../../styles/variables';
+
 .main {
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar-page {
+  display: grid;
+  grid-template-columns: minmax(350px, 15vw) 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-border {
+  border-left: $default-border;
+}
+.right-border {
+  border-right: $default-border;
+}
+.top-border {
+  border-top: $default-border;
+}
+.bottom-border {
+  border-bottom: $default-border;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.page {
-  display: flex;
-  position: relative;
-  width: 100%;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.default-paddings {
+  padding-left: 20px;
+  padding-right: 20px;
 }

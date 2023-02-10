@@ -1,13 +1,16 @@
 import './index.scss';
 
+import { FC } from 'react';
 import { Menu } from './Menu.tsx';
 
-export const Header = () => {
+export const Header: FC = () => {
   return (
-    <header className="header">
-      <div>Logo</div>
+    <header className="header bottom-border default-paddings">
+      <div className="header__logo">Logo</div>
 
       <Menu />
+
+      <div className="header__account"></div>
     </header>
   );
 };
