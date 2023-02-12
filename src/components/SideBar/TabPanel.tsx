@@ -6,14 +6,12 @@ interface ITabPanel {
   id: string;
 }
 
-export const TabPanel: FC<PropsWithChildren<ITabPanel>> = ({ index, id, value, children }) => {
-  return (
-    <div
-      role="tabpanel"
-      hidden={index !== value}
-      id={id}
-    >
-      {children}
-    </div>
-  );
-};
+export const TabPanel: FC<PropsWithChildren<ITabPanel>> = ({ index, id, value, children }) => (
+  <div
+    role="tabpanel"
+    hidden={index !== value}
+    id={id}
+  >
+    {children}
+  </div>
+);

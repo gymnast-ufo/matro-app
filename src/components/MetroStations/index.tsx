@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { Search } from './Search.tsx';
-import { StationList } from './StationList.tsx';
-import { metroAPI } from '../../api/Metro.ts';
+import { StationList } from '../StationList/index.tsx';
+import { IGetMoscowLineResponse, metroAPI } from '../../api/Metro.ts';
 import { IMetroCity, IMetroLine } from '../../types';
 
 export const MetroStations: FC = () => {
@@ -9,9 +9,8 @@ export const MetroStations: FC = () => {
 
   const getMoscowLines = async () => {
     try {
-      const lines = await metroAPI.getAlternative();
-      console.log(lines);
-      setMoscowLines(lines);
+      const response: IGetMoscowLineResponse = await metroAPI.getMoscowLines();
+      setMoscowLines(response.lines);
     } catch (error) {
       console.error(error);
     }
@@ -27,7 +26,7 @@ export const MetroStations: FC = () => {
   ];
 
   return (
-    <div>
+    <div className="default-paddings-y">
       <Search />
 
       <StationList cities={cities} />

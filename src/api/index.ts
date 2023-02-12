@@ -7,7 +7,7 @@ try {
   console.error(error);
 }
 
-const responseOnFulfilled = (response) => response;
+const responseOnFulfilled = (response) => response.data;
 const responseOnError = (error) => {
   if (error?.response?.status) {
     return;
@@ -32,4 +32,4 @@ const createAPI = (baseURL) => {
   return instance;
 };
 
-export const insideAPI = createAPI('/mocks');
+export const insideAPI = createAPI(`${process.env.PUBLIC_URL}/static`);

@@ -24,7 +24,11 @@
   border-bottom: $default-border;
 }
 
-.default-paddings {
+.default-paddings-x {
   padding-left: 20px;
   padding-right: 20px;
+}
+.default-paddings-y {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }

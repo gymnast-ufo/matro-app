@@ -5,7 +5,7 @@ import { Menu } from './Menu.tsx';
 
 export const Header: FC = () => {
   return (
-    <header className="header bottom-border default-paddings">
+    <header className="header bottom-border default-paddings-x">
       <div className="header__logo">Logo</div>
 
       <Menu />
