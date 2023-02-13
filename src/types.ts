@@ -9,3 +9,8 @@ export interface IMetroCity {
   name: string;
   lines?: IMetroLine[];
 }
+
+export interface IStoreSelectedStation {
+  line: IMetroLine['line'],
+  station: IMetroStation,
+}
